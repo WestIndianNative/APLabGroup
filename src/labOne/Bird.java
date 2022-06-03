@@ -1,15 +1,36 @@
 package labOne;
 
-import lab1.Animal;
-import lab1.AnimalBehaviour;
+
 
 public class Bird extends Animal implements AnimalBehaviour {
 
 	private int numberofwings;
 	
-	public Bird(int numberofwings) {
-		this.numberofwings=numberofwings;
+	
+	public int getNumberofwings() {
+		return numberofwings;
 	}
+
+
+
+	public Bird(String Name, int noOfLegs, double height, double weight, int NoOfWings)
+	{
+		super( Name,  noOfLegs,  height,  weight);
+		
+		this.setNoOfWings(NoOfWings);
+	}
+	
+	private void setNoOfWings(int noOfWings) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void setNoOfLegs(int noOfLegs) {
+		this.numberofwings = noOfLegs;
+	}
+	
 	public String move() {
 		String movement="Fly";
 		return movement;
